@@ -264,7 +264,7 @@ This usually means the repo is large and only a sample was read. Try running on 
 ## Contributing
 
 ```bash
-git clone https://github.com/your-org/claude-onboard
+git clone https://github.com/amritessh/claude-onboard
 cd claude-onboard
 npm install
 npm run dev        # watch mode

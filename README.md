@@ -30,10 +30,10 @@ Writing a good `CLAUDE.md` manually takes 1–2 hours. `claude-onboard` does it 
 
 ```bash
 # Run without installing (recommended)
-npx claude-onboard <target>
+npx @amritessh/claude-onboard <target>
 
 # Or install globally
-npm install -g claude-onboard
+npm install -g @amritessh/claude-onboard
 ```
 
 ### Requirements
@@ -53,32 +53,32 @@ export ANTHROPIC_API_KEY=sk-ant-...
 
 ```bash
 # Full URL
-npx claude-onboard https://github.com/expressjs/express
+npx @amritessh/claude-onboard https://github.com/expressjs/express
 
 # Short form
-npx claude-onboard expressjs/express
+npx @amritessh/claude-onboard expressjs/express
 
 # Private repo (requires token)
-npx claude-onboard https://github.com/your-org/private-repo --github-token ghp_...
+npx @amritessh/claude-onboard https://github.com/your-org/private-repo --github-token ghp_...
 ```
 
 ### On a local project
 
 ```bash
 # Current directory
-npx claude-onboard .
+npx @amritessh/claude-onboard .
 
 # Specific path
-npx claude-onboard ~/projects/my-app
+npx @amritessh/claude-onboard ~/projects/my-app
 
 # Write to a custom output directory
-npx claude-onboard . --output-dir ./docs
+npx @amritessh/claude-onboard . --output-dir ./docs
 
 # Preview without writing files
-npx claude-onboard . --dry-run
+npx @amritessh/claude-onboard . --dry-run
 
 # Only generate CLAUDE.md (skip ARCHITECTURE.md)
-npx claude-onboard . --no-architecture
+npx @amritessh/claude-onboard . --no-architecture
 ```
 
 ### In CI (keep docs fresh on every release)
@@ -96,7 +96,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Generate docs
-        run: npx claude-onboard . --output-dir ./docs
+        run: npx @amritessh/claude-onboard . --output-dir ./docs
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Commit if changed
@@ -245,7 +245,7 @@ Generating both documents on a typical medium-sized repo (~50 files) costs appro
 
 ```bash
 # Add a GitHub token to get 5,000 requests/hour instead of 60
-npx claude-onboard https://github.com/owner/repo --github-token $(gh auth token)
+npx @amritessh/claude-onboard https://github.com/owner/repo --github-token $(gh auth token)
 ```
 
 **ANTHROPIC_API_KEY not found**

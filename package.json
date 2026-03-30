@@ -1,5 +1,5 @@
 {
-  "name": "claude-onboard",
+  "name": "@amritessh/claude-onboard",
   "version": "0.1.0",
   "description": "Generate CLAUDE.md and ARCHITECTURE.md for any GitHub repo or local project",
   "main": "dist/index.js",
